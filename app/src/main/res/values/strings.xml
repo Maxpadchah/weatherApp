@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">weatherApp</string>
+    <string name="app_name">Weather App</string>
+    <string name="temperature_label">Температура</string>
+    <string name="feels_like_label">Ощущается как</string>
+    <string name="city_coordinates">lt/ln: %s, %s"</string>
+    <string name="error">Error</string>
+    <string name="reload">Reload</string>
+
+    <string name="change_city">Change city</string>
+
+    <string name="open_weather_maps_app_id">11111</string>
+
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_thunder">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+    <string name="temp">&#176;</string>
+
+
+    <string name="sun">☀</string>
+    <string name="cloud">&#9729;</string>
+    <string name="cloud_sun">&#9925;</string>
+    <string name="rain">&#127783;</string>
+    <string name="thundercloud_with_rain">&#9928;</string>
+
+
 </resources>
