@@ -10,15 +10,20 @@ class MainViewModel (
     private val repositoryImpl: Repository = RepositoryImpl()):
     ViewModel() {
 
-        fun getLiveData() = liveDataToObserve
+    fun getLiveData() = liveDataToObserve
 
-        fun getWeatherFromLocalSource() = getDataFromLocalSource()
+    fun getWeatherFromLocalSourceRus() = getDataFromLocalSource(isRussian = true)
 
-        private fun getDataFromLocalSource() {
-            liveDataToObserve.value = AppState.Loading
-            Thread {
-                Thread.sleep(1000)
-                liveDataToObserve.postValue(AppState.Success(repositoryImpl.getWeatherFromLocalStorage()))
-            }.start()
-        }
+    fun getWeatherFromLocalSourceWorld() = getDataFromLocalSource(isRussian = false)
+
+    fun getWeatherFromRemoteSource() = getDataFromLocalSource(isRussian = true)
+
+    private fun getDataFromLocalSource(isRussian: Boolean) {
+        liveDataToObserve.value = AppState.Loading
+        Thread {
+            Thread.sleep(1000)
+            liveDataToObserve.postValue(AppState.Success(if (isRussian) repositoryImpl.getWeatherFromLocalStorageRus() else repositoryImpl.getWeatherFromLocalStorageWorld()))
+        }.start()
+    }
 }
+
