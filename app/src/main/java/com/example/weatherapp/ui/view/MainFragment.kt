@@ -29,7 +29,7 @@ class MainFragment : Fragment() {
             val manager = activity?.supportFragmentManager
             if (manager != null) {
                 val bundle = Bundle()
-      //          bundle.putParcelable(DetailsFragment.BUNDLE_EXTRA)
+                 bundle.putParcelable(DetailsFragment.BUNDLE_EXTRA, weather)
                 manager.beginTransaction()
                     .add(R.id.container, DetailsFragment.newInstance(bundle))
                     .addToBackStack("")

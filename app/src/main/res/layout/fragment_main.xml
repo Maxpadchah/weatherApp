@@ -19,10 +19,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_15_dp"
-        android:src="@drawable/ic_russia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="56dp" />
+        app:maxImageSize="56dp"
+        app:tint="@null"
+        android:src ="@drawable/ic_russia" />
 
     <FrameLayout
         android:id="@+id/mainFragmentLoadingLayout"

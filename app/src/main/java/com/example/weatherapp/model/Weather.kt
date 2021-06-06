@@ -1,41 +1,17 @@
 package com.example.weatherapp.model
 
-import android.os.Parcel
-import android.os.Parcelable
-import androidx.versionedparcelable.ParcelField
-import androidx.versionedparcelable.VersionedParcelize
 
-@VersionedParcelize
+import android.os.Parcelable
+
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Weather(
     val city: City = getDefaultCity(),
     val temperature: Double = 28.4,
-//    val pressure: Double = 759.4,
-//    val humidity: Double = 59.3
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        TODO("city"),
-        parcel.readDouble()
-    ) {
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeDouble(temperature)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<Weather> {
-        override fun createFromParcel(parcel: Parcel): Weather {
-            return Weather(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Weather?> {
-            return arrayOfNulls(size)
-        }
-    }
-}
+    val pressure: Double = 759.4,
+    val humidity: Double = 59.3
+) : Parcelable
 
 fun getDefaultCity() = City("Лиски, Воронежская область",
     55.755826, 37.617299905)
