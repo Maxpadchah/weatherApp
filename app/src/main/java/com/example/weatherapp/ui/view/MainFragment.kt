@@ -3,6 +3,8 @@ package com.example.weatherapp.ui.view
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -46,6 +48,7 @@ class MainFragment : Fragment() {
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.getRoot()
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
