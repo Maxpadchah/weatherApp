@@ -6,6 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerIcon"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/city_field"
@@ -30,12 +38,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="13sp" />
 
-        <TextView
-            android:id="@+id/weather_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerInParent="true"
-            android:text="@string/cloud_sun"
+            tools:srcCompat="@drawable/ic_bkn_d"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="150dp" />
 

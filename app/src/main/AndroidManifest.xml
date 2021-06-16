@@ -22,7 +22,7 @@
 
         <receiver android:name=".MainBroadcastReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
     </application>
